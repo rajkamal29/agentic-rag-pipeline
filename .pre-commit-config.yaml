@@ -1,0 +1,26 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.10
+    hooks:
+      - id: ruff-check
+        args: [--fix, src, tests]
+      - id: ruff-format
+        args: [src, tests]
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        args: [src, tests]
+  - repo: https://github.com/pre-commit/mirrors-pyright
+    rev: v1.1.408
+    hooks:
+      - id: pyright
+        args: [src, tests]
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: python -m pytest
+        language: system
+        pass_filenames: false
+        stages: [pre-push]

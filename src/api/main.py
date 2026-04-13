@@ -2,7 +2,6 @@ from fastapi import FastAPI
 
 from src.api.routes import health_router
 
-
 app = FastAPI(
     title="Agentic RAG API",
     version="0.1.0",

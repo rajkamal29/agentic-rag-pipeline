@@ -1,0 +1,10 @@
+# Update owners as needed for your organization.
+# This baseline makes one reviewer mandatory when branch protection enables code owner reviews.
+
+* @rajkamal29
+
+.github/workflows/* @rajkamal29
+infra/* @rajkamal29
+scripts/* @rajkamal29
+src/* @rajkamal29
+tests/* @rajkamal29

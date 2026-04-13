@@ -1,8 +1,6 @@
 README.md
 pyproject.toml
 src/__init__.py
-src/main.py
-src/routes.py
 src/agent/__init__.py
 src/agentic_rag_azure.egg-info/PKG-INFO
 src/agentic_rag_azure.egg-info/SOURCES.txt
@@ -10,6 +8,8 @@ src/agentic_rag_azure.egg-info/dependency_links.txt
 src/agentic_rag_azure.egg-info/requires.txt
 src/agentic_rag_azure.egg-info/top_level.txt
 src/api/__init__.py
+src/api/main.py
+src/api/routes.py
 src/guardrails/__init__.py
 src/ingestion/__init__.py
 src/observability/__init__.py
