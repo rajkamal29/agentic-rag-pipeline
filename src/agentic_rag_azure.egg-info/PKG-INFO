@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: agentic-rag-azure
+Version: 0.1.0
+Summary: Agentic RAG baseline service for Azure
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi<1.0.0,>=0.115.0
+Requires-Dist: uvicorn[standard]<1.0.0,>=0.30.0
+Requires-Dist: pydantic<3.0.0,>=2.8.0
+Requires-Dist: python-dotenv<2.0.0,>=1.0.1
+Provides-Extra: dev
+Requires-Dist: pytest<9.0.0,>=8.3.0; extra == "dev"
+Requires-Dist: pytest-cov<6.0.0,>=5.0.0; extra == "dev"
+Requires-Dist: httpx<1.0.0,>=0.27.0; extra == "dev"
+Requires-Dist: ruff<1.0.0,>=0.6.0; extra == "dev"
+Requires-Dist: black<25.0.0,>=24.8.0; extra == "dev"
+Requires-Dist: pyright<2.0.0,>=1.1.380; extra == "dev"
+
+# Agentic RAG Azure (Python)
+
+Production-ready starter for an Agentic RAG platform on Azure.
+
+## Day 1 Step 1 Baseline
+- FastAPI service with health endpoint
+- Package and test scaffold
+- Strict lint/type/test tooling configuration
+
+## Project Structure
+- `src/api`: API entrypoint and routes
+- `src/agent`: Agent orchestration
+- `src/retrieval`: Retrieval services
+- `src/ingestion`: Ingestion pipelines
+- `src/guardrails`: Policy and guardrails
+- `src/observability`: Telemetry and tracing
+- `tests`: Unit, integration, and security tests
+- `infra`: Infrastructure templates and scripts
+- `scripts`: Utility scripts
+
+## Local Run
+1. Activate environment:
+   - PowerShell: `.\\.venv\\Scripts\\Activate.ps1`
+2. Install dependencies:
+   - `pip install -e .[dev]`
+3. Run tests:
+   - `pytest`
+4. Start API:
+   - `uvicorn src.api.main:app --reload`
+5. Health check:
+   - `http://127.0.0.1:8000/api/v1/health`
